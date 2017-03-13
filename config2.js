@@ -10,9 +10,9 @@ System.config({
     "optional": []
   },
   paths: {
-    "github:*": "https://cdn.rawgit.com/mariaantony-gnanasekaran/aurelia-syncfusion-bundles/0.0.3/jspm_packages/github/*",
-    "npm:*": "https://cdn.rawgit.com/mariaantony-gnanasekaran/aurelia-syncfusion-bundles/0.0.3/jspm_packages/npm/*", 
-    "bundles/bundle.js": "https://cdn.rawgit.com/mariaantony-gnanasekaran/aurelia-syncfusion-bundles/0.0.3/bundles/bundle.js"
+    "github:*": "https://cdn.rawgit.com/mariaantony-gnanasekaran/aurelia-syncfusion-bundles/0.0.4/jspm_packages/github/*",
+    "npm:*": "https://cdn.rawgit.com/mariaantony-gnanasekaran/aurelia-syncfusion-bundles/0.0.4/jspm_packages/npm/*", 
+    "bundles/bundle.js": "https://cdn.rawgit.com/mariaantony-gnanasekaran/aurelia-syncfusion-bundles/0.0.4/bundles/bundle.js"
   },
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.1",
@@ -49,7 +49,7 @@ System.config({
     "jquery-validation-unobtrusive": "npm:jquery-validation-unobtrusive@3.2.6",
     "json": "github:systemjs/plugin-json@0.1.2",
     "jsrender": "npm:jsrender@0.9.80",
-    "syncfusion-widgets": "npm:syncfusion-javascript@15.1.37",
+    "syncfusion-javascript": "npm:syncfusion-javascript@15.1.37",
     "text": "github:systemjs/plugin-text@0.0.7",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
