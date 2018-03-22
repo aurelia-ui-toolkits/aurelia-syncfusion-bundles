@@ -12,7 +12,7 @@ System.config({
   paths: {
     "github:*": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.5/jspm_packages/github/*",
     "npm:*": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.5/jspm_packages/npm/*", 
-    "bundles/bundle.js": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.5/bundles/bundle.js"
+    "bundles/bundle.js": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.5/bundles/bundle.js",
     "syncfusion-javascript/*": "https://rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.5/npm/syncfusion-javascript@16.1.26/*",
   },
   map: {
