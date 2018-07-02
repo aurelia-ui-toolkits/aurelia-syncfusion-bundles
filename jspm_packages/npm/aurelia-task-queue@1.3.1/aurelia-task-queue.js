@@ -12,21 +12,22 @@ define(['exports', 'aurelia-pal'], function (exports, _aureliaPal) {
   var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
     return typeof obj;
   } : function (obj) {
-    return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj;
+    return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
   };
 
-  var hasSetImmediate = typeof setImmediate === 'function';
   var stackSeparator = '\nEnqueued in TaskQueue by:\n';
   var microStackSeparator = '\nEnqueued in MicroTaskQueue by:\n';
 
   function makeRequestFlushFromMutationObserver(flush) {
-    var toggle = 1;
     var observer = _aureliaPal.DOM.createMutationObserver(flush);
-    var node = _aureliaPal.DOM.createTextNode('');
+    var val = 'a';
+    var node = _aureliaPal.DOM.createTextNode('a');
+    var values = Object.create(null);
+    values.a = 'b';
+    values.b = 'a';
     observer.observe(node, { characterData: true });
     return function requestFlush() {
-      toggle = -toggle;
-      node.data = toggle;
+      node.data = val = values[val];
     };
   }
 
@@ -50,10 +51,6 @@ define(['exports', 'aurelia-pal'], function (exports, _aureliaPal) {
 
     if ('onError' in task) {
       task.onError(error);
-    } else if (hasSetImmediate) {
-      setImmediate(function () {
-        throw error;
-      });
     } else {
       setTimeout(function () {
         throw error;

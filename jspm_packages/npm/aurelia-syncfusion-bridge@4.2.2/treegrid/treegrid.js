@@ -1,11 +1,11 @@
 /* */ 
-define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common'], function (exports, _widgetBase, _constants, _decorators, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', '../common/template-processor'], function (exports, _widgetBase, _constants, _decorators, _common, _templateProcessor) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.ejTreeMap = undefined;
+  exports.ejTreeGrid = undefined;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -82,24 +82,26 @@ define(['exports', '../common/widget-base', '../common/constants', '../common/de
 
   var _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor;
 
-  var ejTreeMap = exports.ejTreeMap = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'tree-map'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejTreeMap', ['borderBrush', 'borderThickness', 'uniColorMapping', 'desaturationColorMapping', 'paletteColorMapping', 'colorValuePath', 'colorPath', 'dataSource', 'dockPosition', 'drillDownHeaderColor', 'drillDownSelectionColor', 'isHierarchicalDatasource', 'header', 'enableDrillDown', 'isResponsive', 'enableResize', 'draggingOnSelection', 'draggingGroupOnSelection', 'groupColorMapping', 'legendSettings', 'highlightBorderBrush', 'highlightBorderThickness', 'highlightGroupBorderBrush', 'highlightGroupBorderThickness', 'highlightGroupOnSelection', 'highlightOnSelection', 'itemsLayoutMode', 'enableGroupSeparator', 'locale', 'leafItemSettings', 'rangeColorMapping', 'selectionMode', 'groupSelectionMode', 'showLegend', 'enableGradient', 'showTooltip', 'tooltipTemplate', 'treeMapItems', 'levels', 'weightValuePath'], ['dataSource', 'weightValuePath'], {}, ['dataSource']), _dec4 = (0, _common.inject)(Element), _dec5 = (0, _common.children)(_constants.constants.elementPrefix + 'level'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
-    _inherits(ejTreeMap, _WidgetBase);
+  var ejTreeGrid = exports.ejTreeGrid = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'tree-grid'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejTreeGrid', ['allowColumnReordering', 'allowColumnResize', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowPaging', 'allowSearching', 'allowSelection', 'allowSorting', 'allowTextWrap', 'altRowTemplateID', 'cellTooltipTemplate', 'childMapping', 'collapsibleTotalSummary', 'columnDialogFields', 'columnResizeSettings', 'columns', 'commonWidth', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'detailsRowHeight', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableLoadOnDemand', 'enableResize', 'enableVirtualization', 'expandStateMapping', 'filterSettings', 'headerTextOverflow', 'idMapping', 'isResponsive', 'locale', 'pageSettings', 'parentIdMapping', 'parseRowTemplate', 'query', 'rowHeight', 'rowTemplateID', 'searchSettings', 'selectedCellIndexes', 'selectedRowIndex', 'selectionSettings', 'showColumnChooser', 'showColumnOptions', 'showDetailsRow', 'showDetailsRowInfoColumn', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'showStackedHeader', 'showSummaryRow', 'showTotalSummary', 'sizeSettings', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'toolbarSettings', 'totalSummaryHeight', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], { 'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId' }, ['dataSource']), _dec4 = (0, _common.inject)(Element, _common.TemplatingEngine), _dec5 = (0, _common.children)(_constants.constants.elementPrefix + 'tree-grid-column'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
+    _inherits(ejTreeGrid, _WidgetBase);
 
-    function ejTreeMap(element) {
-      _classCallCheck(this, ejTreeMap);
+    function ejTreeGrid(element, templateEngine) {
+      _classCallCheck(this, ejTreeGrid);
 
       var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
 
-      _initDefineProp(_this, 'levels', _descriptor, _this);
+      _initDefineProp(_this, 'columns', _descriptor, _this);
 
       _this.element = element;
       _this.hasChildProperty = true;
-      _this.childPropertyName = 'levels';
+      _this.childPropertyName = 'columns';
+      _this.templateProcessor = new _templateProcessor.TemplateProcessor(_this, templateEngine);
+      _this.templateProcessor.initTemplate();
       return _this;
     }
 
-    return ejTreeMap;
-  }(_widgetBase.WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'levels', [_dec5], {
+    return ejTreeGrid;
+  }(_widgetBase.WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'columns', [_dec5], {
     enumerable: true,
     initializer: function initializer() {
       return [];
