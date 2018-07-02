@@ -10,10 +10,10 @@ System.config({
     "optional": []
   },
   paths: {
-    "github:*": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.8/jspm_packages/github/*",
-    "npm:*": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.8/jspm_packages/npm/*", 
-    "syncfusion-javascript/*": "https://rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.8/npm/syncfusion-javascript@16.1.26/*",
-    "bundles/bundle.js": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.8/bundles/bundle.js"
+    "github:*": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.9/jspm_packages/github/*",
+    "npm:*": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.9/jspm_packages/npm/*", 
+    "syncfusion-javascript/*": "https://rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.9/npm/syncfusion-javascript@16.1.26/*",
+    "bundles/bundle.js": "https://cdn.rawgit.com/aurelia-ui-toolkits/aurelia-syncfusion-bundles/0.0.9/bundles/bundle.js"
   },
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.4",
